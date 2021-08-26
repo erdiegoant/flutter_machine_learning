@@ -53,13 +53,47 @@ class _BarcodeCameraPageState extends State<BarcodeCameraPage> {
     String newResult = "";
 
     for (final barcode in barcodes) {
-      final String displayValue = barcode.value.displayValue!;
+      final String displayValue = getBarcodeInformation(barcode);
       newResult += "$displayValue \n";
     }
 
     setState(() {
       result = newResult;
     });
+  }
+
+  String getBarcodeInformation(Barcode barcode) {
+    String result = "";
+
+    print(barcode.type);
+
+    switch (barcode.type) {
+      case BarcodeType.email:
+        BarcodeEmail data = barcode.value as BarcodeEmail;
+        result = data.displayValue!;
+        break;
+      case BarcodeType.phone:
+        BarcodePhone data = barcode.value as BarcodePhone;
+        result = data.number!;
+        break;
+      case BarcodeType.wifi:
+        BarcodeWifi data = barcode.value as BarcodeWifi;
+        result = "${data.ssid} ${data.password}";
+        break;
+      case BarcodeType.url:
+        BarcodeUrl data = barcode.value as BarcodeUrl;
+        result = data.url!;
+        break;
+      case BarcodeType.text:
+        BarcodeValue data = barcode.value;
+        result = data.rawValue!;
+        break;
+      default:
+        result = barcode.value.rawValue!;
+        break;
+    }
+
+    return result;
   }
 
   @override
