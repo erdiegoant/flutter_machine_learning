@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/pages/barcode_camera_page.dart';
+import 'package:machine_learning/pages/camera_feed_barcode_page.dart';
 
 late List<CameraDescription> cameras;
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BarcodeCameraPage(),
+      home: CameraFeedBarcodePage(),
     );
   }
 }
