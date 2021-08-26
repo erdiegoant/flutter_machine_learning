@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:image_picker/image_picker.dart';
 
-class ImageLabeling extends StatefulWidget {
-  ImageLabeling({Key? key}) : super(key: key);
+class ImageLabelingPage extends StatefulWidget {
+  ImageLabelingPage({Key? key}) : super(key: key);
 
   @override
-  _ImageLabelingState createState() => _ImageLabelingState();
+  _ImageLabelingPageState createState() => _ImageLabelingPageState();
 }
 
-class _ImageLabelingState extends State<ImageLabeling> {
+class _ImageLabelingPageState extends State<ImageLabelingPage> {
   File? _image;
   late ImagePicker picker;
   late ImageLabeler imageLabeler;
