@@ -1,7 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-
-import '../main.dart';
+import 'package:machine_learning/main.dart';
 
 class CameraFeedPage extends StatefulWidget {
   const CameraFeedPage({Key? key}) : super(key: key);

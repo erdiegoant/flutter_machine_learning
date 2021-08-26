@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CameraPage extends StatefulWidget {
-  CameraPage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  CameraPage({Key? key}) : super(key: key);
 
   @override
   _CameraPageState createState() => _CameraPageState();
@@ -45,9 +43,6 @@ class _CameraPageState extends State<CameraPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
