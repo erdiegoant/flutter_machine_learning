@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/pages/camera_face_recognition_page.dart';
+import 'package:machine_learning/pages/text_translation.dart';
 
 late List<CameraDescription> cameras;
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CameraFaceRecognitionPage(),
+      home: TextTranslationPage(),
     );
   }
 }
