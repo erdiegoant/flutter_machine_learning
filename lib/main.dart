@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/pages/caera_face_recognition_page.dart';
+import 'package:machine_learning/pages/camera_face_recognition_page.dart';
 
 late List<CameraDescription> cameras;
 
