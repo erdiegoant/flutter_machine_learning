@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/tensorflow_pages/camera_feed_labeling_tensorflow.dart';
+import 'package:machine_learning/tensorflow_pages/camera_object_detection_tensorflow.dart';
 
 late List<CameraDescription> cameras;
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CameraFeedLabelingTensorFlow(),
+      home: CameraObjectDetectionTensorFLow(),
     );
   }
 }
