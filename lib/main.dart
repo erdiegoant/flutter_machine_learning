@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/pages/text_translation.dart';
+import 'package:machine_learning/tensorflow_pages/camera_labeling_tensorflow.dart';
 
 late List<CameraDescription> cameras;
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TextTranslationPage(),
+      home: CameraLabelingTensorFLow(),
     );
   }
 }
