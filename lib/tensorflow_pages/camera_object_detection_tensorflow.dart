@@ -37,7 +37,6 @@ class _CameraObjectDetectionTensorFLowState
   UI.Image? image;
   List<DetectedObject> detectedObjects = [];
   late ImagePicker picker;
-  String result = '';
 
   @override
   void initState() {
@@ -94,10 +93,7 @@ class _CameraObjectDetectionTensorFLowState
       return;
     }
 
-    String newResult = "";
-
     setState(() {
-      result = newResult;
       detectedObjects = objects
           .map(
             (object) => DetectedObject(
@@ -175,13 +171,6 @@ class _CameraObjectDetectionTensorFLowState
                 ],
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: Text(
-                '$result',
-                style: TextStyle(fontFamily: 'finger_paint', fontSize: 20),
-              ),
-            )
           ],
         ),
       ),
