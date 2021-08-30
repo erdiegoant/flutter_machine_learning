@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:machine_learning/tensorflow_pages/camera_pose_detection_tensorflow.dart';
+import 'package:machine_learning/tensorflow_pages/camera_feed_pose_detection_tensorflow.dart';
 
 late List<CameraDescription> cameras;
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CameraPoseDetectionTensorFLow(),
+      home: CameraFeedPoseDetectionTensorFlow(),
     );
   }
 }
