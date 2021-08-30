@@ -195,18 +195,18 @@ class ImageFrame extends StatelessWidget {
         width: image.width.toDouble(),
         height: image.height.toDouble(),
         child: CustomPaint(
-          painter: FacePainter(rect: objects, imageFile: image),
+          painter: ObjectFrame(rect: objects, imageFile: image),
         ),
       ),
     );
   }
 }
 
-class FacePainter extends CustomPainter {
+class ObjectFrame extends CustomPainter {
   final List<DetectedObject> rect;
   final UI.Image imageFile;
 
-  const FacePainter({required this.rect, required this.imageFile});
+  const ObjectFrame({required this.rect, required this.imageFile});
 
   @override
   void paint(Canvas canvas, Size size) {

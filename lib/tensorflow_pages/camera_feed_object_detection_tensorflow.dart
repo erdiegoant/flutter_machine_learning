@@ -33,6 +33,8 @@ class _CameraFeedObjectDetectionTensorFlowState
       isAsset: true,
       useGpuDelegate: false,
     );
+
+    print(res);
   }
 
   void startCamera() {
