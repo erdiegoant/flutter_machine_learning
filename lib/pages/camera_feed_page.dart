@@ -10,17 +10,17 @@ class CameraFeedPage extends StatefulWidget {
 }
 
 class _CameraFeedPageState extends State<CameraFeedPage> {
-  late CameraController controller;
+  CameraController? controller;
 
   @override
   void initState() {
     super.initState();
     controller = CameraController(cameras[1], ResolutionPreset.high);
 
-    controller.initialize().then((_) {
+    controller!.initialize().then((_) {
       if (!mounted) return;
 
-      controller.startImageStream((image) => {});
+      controller!.startImageStream((image) => {});
 
       setState(() {});
     });
@@ -31,8 +31,8 @@ class _CameraFeedPageState extends State<CameraFeedPage> {
     return Scaffold(
       body: controller != null
           ? AspectRatio(
-              aspectRatio: controller.value.aspectRatio,
-              child: CameraPreview(controller),
+              aspectRatio: controller!.value.aspectRatio,
+              child: CameraPreview(controller!),
             )
           : Container(),
     );

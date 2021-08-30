@@ -32,6 +32,8 @@ class _CameraFeedLabelingTensorFlowState
       isAsset: true,
       useGpuDelegate: false,
     );
+
+    print(res);
   }
 
   void startCamera() {

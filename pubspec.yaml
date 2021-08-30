@@ -59,6 +59,8 @@ flutter:
   - assets/models/ssd_mobilenet.txt
   - assets/models/yolov2_tiny.tflite
   - assets/models/yolov2_tiny.txt
+  - assets/models/deeplabv3_257_mv_gpu.tflite
+  - assets/models/deeplabv3_257_mv_gpu.txt
   - assets/models/posenet_mv1_075_float_from_checkpoints.tflite
 
   # An image asset can refer to one or more resolution-specific "variants", see

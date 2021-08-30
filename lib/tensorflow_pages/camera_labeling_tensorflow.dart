@@ -31,6 +31,8 @@ class _CameraLabelingTensorFLowState extends State<CameraLabelingTensorFLow> {
       isAsset: true,
       useGpuDelegate: false,
     );
+
+    print(res);
   }
 
   Future<void> chooseImageFromGallery() async {
